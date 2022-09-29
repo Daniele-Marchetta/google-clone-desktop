@@ -1,0 +1,94 @@
+<div class="container mt-4 pb-5" style="margin-left: 138pt">
+
+  <div class="list-group col-sm-4 m-3" *ngFor="let item of results |async">
+    <a
+      [href]="item.link"
+      class="list-group-item list-group-item-action bg bg-dark text-white"
+      aria-current="true"
+    >
+      <small><a [href]="">www.youtube.com</a></small>
+      <div class="d-flex w-100 justify-content-between">
+        <h2 class="mb-1">{{item.title}}</h2>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col mb-3">
+          <div class="video"
+            style="
+              height: 100px;
+              width: 177px;
+              background-color: aqua;
+              border-radius: 12px;
+            "
+          >
+          <div  appHover style="opacity: 0;">
+          <span class="d-flex justify-content-center" style="position: relative;" >
+            <svg
+              style="height: 100px; width: 35px; fill: white ;"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="heartbeat"
+
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col">
+          <p class="mb-1" style="overflow-wrap: break-word">
+            {{item.description}}
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+
+  <div *ngIf="googleServ.loader">
+  <div class="list-group col-sm-4 m-3 placeholder-glow" *ngFor="let item of [0,1,2,3,4,5]">
+    <a
+      [href]=""
+      class="list-group-item list-group-item-action bg bg-dark text-white"
+      aria-current="true"
+    >
+      <small class="placeholder">www.youtube.com</small>
+      <div class="d-flex w-100 justify-content-between mt-1">
+        <h5 class="mb-1 placeholder w-50 mb-2">titolo</h5>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col mb-3">
+          <div
+            style="height: 100px; width: 177px; border-radius: 12px"
+            class="placeholder bg-danger"
+
+          >
+          <span class="d-flex justify-content-center" style="position: relative;">
+            <svg
+              style="height: 100px; width: 35px; fill: white"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+
+        </div>
+        <div class="col-xl-6 col">
+          <p class="mb-1 placeholder h-75 w-100 bg-light"></p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+</div>

@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand bg-dark ms-5">
+  <div class="container-fluid">
+    <a class="navbar-brand mt-3 me-4 p-3 " href="#">
+      <img src="{{GoogleImage}}" alt="" srcset="" width="92px" height="30px">
+    </a>
+    <div class="collapse navbar-collapse mt-3 row" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item col-md-4 col-12">
+          <div class="input-group border-2 text-white border-grey bg-dark rounded-pill">
+            <input type="text" class="form-control  rounded-end rounded-pill" aria-label="" style="height: 42px; font-size: large;" [(ngModel)]="SearchValue" required>
+            <span *ngIf="SearchValue" class="input-group-text">
+              <button type="button" (click)="resetSearch()"  class="btn-close" aria-label="Close"></button>
+            </span>
+            <span class="input-group-text " id="basic-addon2">
+              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="mic"></mat-icon>
+            </span>
+            <span class="input-group-text rounded-start rounded-pill pe-4" (click)="onClick()">
+              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"  title="Search" data-toggle="popover" data-placement="right"></mat-icon>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg bg-dark mt-0" style="margin-left: 145.5pt!important;" id="secondnav">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link text-white text-center" id="0" (click)="changeMenu($event)" ngModel  style="display: inline;" [ngClass]="{'menuactive' : this.googleServ.menu[0].menuValue}" >
+            <span style="display:inline-flex; pointer-events: none;">
+            <mat-icon  class="me-2 ms-2" aria-hidden="false" aria-label="Example home icon" fontIcon="search" style="color: white; pointer-events: none;"></mat-icon>
+            <p style="margin-top: 3px; pointer-events: none;">Tutti</p>
+             </span>
+          </a>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link text-white text-center" id="1" (click)="changeMenu($event)" style="display: inline;" [ngClass]="{'menuactive' : this.googleServ.menu[1].menuValue}"  >
+            <span style="display:inline-flex;   pointer-events: none;">
+            <mat-icon  class="me-2 ms-2" aria-hidden="false" aria-label="Example home icon" fontIcon="image" style="color: white;  pointer-events: none;"></mat-icon>
+            <p style="margin-top: 3px;  pointer-events: none;">Immagini</p>
+             </span>
+          </a>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link text-white text-center" id="2" (click)="changeMenu($event)" style="display: inline;" [ngClass]="{'menuactive' : this.googleServ.menu[2].menuValue}" >
+            <span style="display:inline-flex; pointer-events: none;">
+            <mat-icon  class="me-2 ms-2" aria-hidden="false" aria-label="Example home icon" fontIcon="newspaper" style="color: white; pointer-events: none;"></mat-icon>
+            <p style="margin-top: 3px; pointer-events: none;">Notizie</p>
+             </span>
+          </a>
+      </li>
+        <li class="nav-item">
+            <a class="nav-link text-white text-center" id="3" (click)="changeMenu($event)" style="display: inline;" [ngClass]="{'menuactive' : this.googleServ.menu[3].menuValue}"  >
+              <span style="display:inline-flex; pointer-events: none;">
+              <mat-icon  class="me-2 ms-2" aria-hidden="false" aria-label="Example home icon" fontIcon="slideshow" style="color: white; pointer-events: none;"></mat-icon>
+              <p style="margin-top: 3px; pointer-events: none;">Video</p>
+               </span>
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br>
+  <mat-progress-bar mode="indeterminate" *ngIf="this.googleServ.loader"></mat-progress-bar>
+
+
+

@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<mat-progress-bar mode="indeterminate" *ngIf="loader"></mat-progress-bar>
+<div class="container">
+  <form (ngSubmit)="onClick()" [formGroup]="form">
+<div class="row justify-content-center">
+   <div class="col-sm-12 mb-4 text-center" style="margin-top: 230px;">
+     <img [src]="GoogleImage" alt="Google image">
+  </div>
+  <div class="col-sm-7 col-9 text-center ">
+    <div class="input-group mb-3 border-2 text-white border-grey rounded-pill">
+      <span class="input-group-text rounded-end rounded-pill">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
+      </span>
+      <input type="text" class="form-control " aria-label="Amount (to the nearest dollar)" formControlName="InputSearch" style="height: 50px;">
+      <span class="input-group-text rounded-start rounded-pill" id="basic-addon2">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="mic"></mat-icon>
+      </span>
+    </div>
+ </div>
+ <div class="row justify-content-center mt-1">
+   <div class="col-6 text-sm-end">
+  <button type="submit" class="btn text-white bottoni">Cerca con Google</button>
+   </div>
+   <div class="col-6 text-sm-start">
+    <a href="https://www.google.com/doodles">
+        <button type="button" class="btn text-white bottoni">Mi sento Fortunato</button>
+      </a>
+  </div>
+ </div>
+</div>
+  </form>
+</div>
+

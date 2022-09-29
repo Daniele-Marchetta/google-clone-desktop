@@ -1,0 +1,26 @@
+<div class="container mt-4 pb-5" style="margin-left: 138pt;" >
+  <div class="list-group col-sm-4 m-3" *ngFor="let item of results | async">
+    <a [href]="item.link" class="list-group-item list-group-item-action bg bg-dark text-white" aria-current="true">
+      <small><a [href]="item.link">{{item.link}}</a></small>
+      <div class="d-flex w-100 justify-content-between">
+        <h3 class="mb-1">{{item.title}}</h3>
+      </div>
+      <p class="mb-1">{{item.description}}</p>
+    </a>
+</div>
+
+<div *ngIf="this.googleServ.loader">
+    <div class="list-group col-sm-4 m-3 placeholder-glow" *ngFor="let item of [0,1,2,3,4,5,6,7,8,9,10]">
+      <a [href]="" class="list-group-item list-group-item-action bg bg-dark text-white" aria-current="true">
+        <small><a [href]="" class="placeorder w-40"></a></small>
+        <div class="d-flex w-100 justify-content-between">
+          <h3 class="mb-1 placeholder w-75"></h3>
+        </div>
+        <p class="mb-1 placeholder w-100"></p>
+      </a>
+  </div>
+  </div>
+</div>
+
+
+

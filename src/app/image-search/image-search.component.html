@@ -1,0 +1,32 @@
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3" *ngFor="let item of results | async">
+  <div class="card h-100 bg-dark">
+    <img [src]="sanitizeImageUrl(item.image.src)" class="card-img-top" [alt]="sanitizeImageUrl(item.image.alt)" height="189px" width="175px">
+    <div class="card-body">
+      <h5 class="card-title">{{item.link.title}}</h5>
+      <a [href]="item.link.href"><small>{{item.link.href}}</small></a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+  <div *ngIf="this.googleServ.loader">
+  <div class="container-fluid placeholder-glow">
+  <div class="row">
+  <div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11]">
+    <div class="card h-100 bg-dark">
+      <div  class="placeholder w-100" alt="immagine non trovata" style="height:189px ;width:175px"></div>
+            <div class="card-body">
+        <h5 class="placeholder d-block w-50 h-30">titolo</h5>
+        <div class="placeholder d-block w-75 h-40"><small></small></div>
+      </div>
+  </div>
+  </div>
+</div>
+  </div>
+  </div>
+
+
+
