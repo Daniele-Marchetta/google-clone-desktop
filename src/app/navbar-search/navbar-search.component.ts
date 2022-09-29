@@ -17,7 +17,7 @@ import {
 import { SearchResults } from '../search';
 import { ConstantPool } from '@angular/compiler';
 import { Observable, observable } from 'rxjs';
-import { googleLogoSearch } from 'src/environments/environment';
+import { googleLogoSearch } from '../settings';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router, RouterLink } from '@angular/router';
 import { HttpParams } from '@angular/common/http';

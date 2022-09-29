@@ -1,7 +1,7 @@
 import { Observable, observable } from 'rxjs';
-import { SearchUrl, apiKey, ImageUrl, videoUrl, NewsUrl } from './../environments/environment';
 import { HttpClient ,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { apiKey, SearchUrl, ImageUrl, videoUrl, NewsUrl } from './settings';
 
 @Injectable({
   providedIn: 'root'

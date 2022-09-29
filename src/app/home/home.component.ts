@@ -4,8 +4,8 @@ import { GoogleService } from './../google.service';
 import { SearchResults } from './../search';
 import { ApiCallService } from './../apiCall.service';
 import { Component, OnInit } from '@angular/core';
-import { googleLogoSearch } from 'src/environments/environment';
 import { JsonPipe } from '@angular/common';
+import { googleLogoSearch } from '../settings';
 
 @Component({
   selector: 'app-home',
