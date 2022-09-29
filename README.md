@@ -1,6 +1,6 @@
 # GoogleClone
 
-firebase link : link_firebase
+AZURE LINK :  https://ashy-field-0820fee03.1.azurestaticapps.net
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
