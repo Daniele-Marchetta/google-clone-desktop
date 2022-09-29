@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true
 };
 
 export const googleLogoSearch :string="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png";
